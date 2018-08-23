@@ -172,6 +172,13 @@ This chart packages several overridable default values:
 
 | Name        | Description           | Default Value  |
 | ------------- |:-------------:| -----:|
+| cloud.openstack.authURL | The Identity API endpoint for openstack authentication | `""` |
+| cloud.openstack.username | The username passed the the indentity server for authentication | `""` |
+| cloud.openstack.password | The password passed the the indentity server for authentication | `""` |
+| cloud.openstack.region | The region of the tenant | `""` |
+| cloud.openstack.tenantID | The ID of the tenant | `""` |
+| cloud.openstack.tenantName | The name of the tenant | `""` |
+| cloud.openstack.domainName | If using a user name and password to authenticate, specify either it’s owning domain name or ID | `""` |
 | cloud.provider     | The cloud provider.  One of aws,gce,openstack | `openstack` |
 | cloud.secret.create      | Whether to create a secret or use an existing one for cloud authentication | `true` |
 | cloud.secret.name      | The name of the secret. If create==true then this will be prefixed with the release name otherwise will look for an existing secret. | `cloud-config` |
@@ -183,13 +190,6 @@ This chart packages several overridable default values:
 | controller.nodeSelector | The nodeSelector for the controller container | `{}` |
 | controller.tolerations | The tolerations for the controller container | `[]` |
 | controller.affinity | The affinity for the controller container | `{}` |
-| openstack.authURL | The Identity API endpoint for openstack authentication | `""` |
-| openstack.username | The username passed the the indentity server for authentication | `""` |
-| openstack.password | The password passed the the indentity server for authentication | `""` |
-| openstack.region | The region of the tenant | `""` |
-| openstack.tenantID | The ID of the tenant | `""` |
-| openstack.tenantName | The name of the tenant | `""` |
-| openstack.domainName | If using a user name and password to authenticate, specify either it’s owning domain name or ID | `""` |
 | provisioner.image.repository | The image repository for the provisioner | `ciscosso/snapshot-cprovisioner` |
 | provisioner.image.tag | The image tag for the provisioner | `0.1.0` |
 | provisioner.image.pullPolicy | The image pullPolicy for the provisioner | `IfNotPresent` |
